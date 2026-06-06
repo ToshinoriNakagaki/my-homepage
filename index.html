@@ -304,6 +304,83 @@
       font-size: 0.9rem;
     }
 
+    /* ===== ABOUT ===== */
+    .about {
+      padding: 6rem 2rem;
+      background: var(--bg);
+    }
+
+    .about-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 1rem;
+    }
+
+    .about h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      margin-bottom: 3rem;
+      line-height: 1.2;
+    }
+
+    .about-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .about-table tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-table tr:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .about-table th {
+      width: 160px;
+      padding: 1.4rem 1rem 1.4rem 0;
+      text-align: left;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--accent-light);
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+    .about-table td {
+      padding: 1.4rem 0;
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 640px) {
+      .about-table th,
+      .about-table td {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
+      }
+      .about-table tr {
+        padding: 1rem 0;
+        display: block;
+      }
+      .about-table th {
+        font-size: 0.78rem;
+        color: var(--accent-light);
+        padding-top: 1rem;
+      }
+    }
+
     /* ===== FOOTER ===== */
     footer {
       padding: 2rem;
@@ -328,7 +405,7 @@
     <ul class="nav-links">
       <li><a href="#">ホーム</a></li>
       <li><a href="#">サービス</a></li>
-      <li><a href="#">会社概要</a></li>
+      <li><a href="#about">会社概要</a></li>
     </ul>
     <button class="nav-cta">お問い合わせ</button>
   </nav>
@@ -382,6 +459,28 @@
         <h3>24<span style="font-size:1rem">/</span>7</h3>
         <p>サポート対応</p>
       </div>
+    </div>
+  </section>
+
+  <!-- 会社概要 -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <span class="section-label">About Us</span>
+      <h2>会社概要</h2>
+      <table class="about-table">
+        <tr>
+          <th>会社名</th>
+          <td>テスト会社</td>
+        </tr>
+        <tr>
+          <th>住所</th>
+          <td>日本のどこか？</td>
+        </tr>
+        <tr>
+          <th>サービス内容</th>
+          <td>ビジネスのお困りごとをAIで解決</td>
+        </tr>
+      </table>
     </div>
   </section>
 
